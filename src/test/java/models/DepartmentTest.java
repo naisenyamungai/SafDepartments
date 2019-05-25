@@ -28,4 +28,12 @@ public class DepartmentTest {
         Department otherDepartment = new Department("CSO","Converged Services Operations","Technology");
         assertEquals(2, Department.getAll().size());
     }
+
+    @Test
+    public void AllDepartmentsContainsAllDepartments_true() {
+        Department department = new Department("NPD","Network Planning and Design","Technology");
+        Department otherDepartment = new Department("CSO","Converged Services Operations","Technology");
+        assertTrue(Department.getAll().contains(department));
+        assertTrue(Department.getAll().contains(otherDepartment));
+    }
 }
