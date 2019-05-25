@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{#block "title"}}Safaricom Departments{{/block}}</title>
+
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+<ul class="nav nav-tabs">
+    <li role="presentation" ><a href="/"><h3>Home</h3></a></li>
+    <li role="presentation"><a href="/departmentForm"><h3>Add Your Department</h3></a></li>
+
+    <li role="presentation"><a href="/departments"><h3>See All Departments</h3></a></li>
+
+</ul>
+<div class="container">
+    <!--begin main template-->
+
+
+    <div class="col-md-12">
+        {{#block "content"}}
+        {{/block}}
+
+    </div>
+</div>
+<!--end main template-->
+{{#block "footer"}}
+    </body>
+    </html>
+{{/block}}
