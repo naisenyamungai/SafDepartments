@@ -1,0 +1,24 @@
+{{#partial "content"}}
+
+    <h2>TECHNOLOGY DEPARTMENTS</h2>
+
+
+
+    {{#if department}}
+        {{#each department}}
+            {{department}}
+
+            <p>{{department.name}} created </p>
+
+        {{/each}}
+
+    {{else}}
+
+        <p>No departments posted yet</p>
+
+    {{/if}}
+
+    <a href="/">Return to home page</a>
+{{/partial}}
+
+{{> layout.hbs}}
