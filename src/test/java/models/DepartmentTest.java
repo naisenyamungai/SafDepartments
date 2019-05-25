@@ -21,4 +21,11 @@ public class DepartmentTest {
         Department department = new Department("NPD", "Network Planning and Design", "Technology");
         assertEquals(true, department instanceof Department);
     }
+
+    @Test
+    public void AllDepartmentsAreCorrectlyReturned_true() {
+        Department department = new Department("NPD","Network Planning and Design","Technology");
+        Department otherDepartment = new Department("CSO","Converged Services Operations","Technology");
+        assertEquals(2, Department.getAll().size());
+    }
 }
