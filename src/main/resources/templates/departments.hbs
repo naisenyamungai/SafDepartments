@@ -2,13 +2,39 @@
 
     <h2>TECHNOLOGY DEPARTMENTS</h2>
 
+<!--    {{#if department}}-->
+<!--        {{#each department}}-->
+<!--            {{department}}-->
 
+<!--            <p>{{department}} created </p>-->
+
+<!--        {{/each}}-->
+
+<!--    {{else}}-->
+
+<!--        <p>No departments posted yet</p>-->
+
+<!--    {{/if}}-->
+
+<!--    <a href="/">Return to home page</a>-->
+
+<!--    <h2>TECHNOLOGY DEPARTMENTS</h2>-->
 
     {{#if department}}
         {{#each department}}
-            {{department}}
+            <div class="row">
+                <div class="col-md-4">
+                    {{abb}}
+                </div>
 
-            <p>{{department.name}} created </p>
+                <div class="col-md-4">
+                    {{name}}
+                </div>
+
+                <div class="col-md-4">
+                    {{division}}
+                </div>
+            </div>
 
         {{/each}}
 
@@ -19,6 +45,7 @@
     {{/if}}
 
     <a href="/">Return to home page</a>
+
 {{/partial}}
 
 {{> layout.hbs}}

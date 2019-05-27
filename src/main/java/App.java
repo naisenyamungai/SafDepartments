@@ -23,7 +23,7 @@ public class App {
             port = 4567;
         }
 
-        setPort(port);
+        port(port);
 
         get("/", (request, response) -> {
                     Map<String, Object> model = new HashMap<>();
@@ -44,7 +44,7 @@ public class App {
                     String divisionName = request.queryParams("divisionName");
                     String departmentAbbreviation = request.queryParams("departmentAbbreviation");
                     Department newDepartment = new Department(departmentAbbreviation, departmentName, divisionName);
-//            request.session().attribute("departmentName", departmentName);
+                    request.session().attribute("departmentName", departmentName);
                     model.put("department", newDepartment);
                     return new ModelAndView(model, "departmentCreated.hbs");
                 }, new HandlebarsTemplateEngine()
