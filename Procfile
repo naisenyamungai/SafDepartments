@@ -1,1 +1,1 @@
-web: ./build/install/to-do/bin/SafDivision
+web: ./build/install/SafDivision/bin/SafDivision
