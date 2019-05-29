@@ -1,0 +1,16 @@
+{{#partial "content"}}
+    <h1>Create a new Section</h1>
+    <form action="/department/{{department.id}}/add" method="post">
+        <div class="form-group">
+            <label for="sectionName">Section Name</label>
+            <input id="sectionName" name="sectionName" class="form-control" type="text">
+        </div>
+
+        <button type="submit" class="btn">Add Sections</button>
+
+    </form>
+
+
+{{/partial}}
+
+{{> layout.hbs}}

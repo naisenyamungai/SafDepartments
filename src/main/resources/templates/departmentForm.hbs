@@ -1,51 +1,46 @@
 {{#partial "content"}}
 
-    <h1>Create a new Department</h1>
-    <form action="/departmentCreated" method="post">
-        <div class="form-group">
-            <label for="employeeNumber">Your Employee Number</label>
-            <input id="employeeNumber" name="employeeNumber" class="form-control" type="text">
-        </div>
+    {{#if editDepartment}}
+        <h1>Edit this Department</h1>
+        <form action="/department/{{editDepartment.id}}/update" method="post">
+            <div class="form-group">
+                <label for="sectionName">Section Name</label>
+                <input id="sectionName" name="sectionName" class="form-control" type="text" value="{{editDepartment.section}}">
+            </div>
 
-        <div class="form-group">
-            <label for="employeeName">Your Name</label>
-            <input id="employeeName" name="employeeName" class="form-control" type="text">
-        </div>
+        </form>
 
-        <div class="form-group">
-            <label for="departmentAbbreviation">Department Abbreviation</label>
-            <input id="departmentAbbreviation" name="departmentAbbreviation" class="form-control" type="text">
-        </div>
+    {{else}}
+            <h1>Create a new Department</h1>
+        <form action="/departmentCreated" method="post">
 
-        <div class="form-group">
-            <label for="departmentName">Department Name</label>
-            <input id="departmentName" name="departmentName" class="form-control" type="text">
-        </div>
+                <div class="form-group">
+                    <label for="departmentAbbreviation">Department Abbreviation</label>
+                    <input id="departmentAbbreviation" name="departmentAbbreviation" class="form-control" type="text">
+                </div>
 
-        <div class="form-group">
-            <label for="divisionName">Division Name</label>
-            <input id="divisionName" name="divisionName" class="form-control" type="text">
-        </div>
+                <div class="form-group">
+                    <label for="departmentName">Department Name</label>
+                    <input id="departmentName" name="departmentName" class="form-control" type="text">
+                </div>
 
-        <div class="form-group">
-            <label for="sectionName">Section Name</label>
-            <input id="sectionName" name="sectionName" class="form-control" type="text">
-        </div>
+                <div class="form-group">
+                    <label for="divisionName">Division Name</label>
+                    <input id="divisionName" name="divisionName" class="form-control" type="text">
+                </div>
 
-        <div class="form-group">
-            <label for="yourJobTitle">Job Title</label>
-            <input id="yourJobTitle" name="yourJobTitle" class="form-control" type="text">
-        </div>
-
-        <div class="form-group">
-            <label for="yourResponsibilities">Role and Responsibilities</label>
-            <input id="yourResponsibilities" name="yourResponsibilities" class="form-control" type="text">
-        </div>
+                <div class="form-group">
+                    <label for="sectionName">Section Name</label>
+                    <input id="sectionName" name="sectionName" class="form-control" type="text">
+                </div>
+    {{/if}}
 
         <button type="submit" class="btn">Submit</button>
 
-    </form>
+        </form>
+
     <a href="/">Return to home page</a>
+
 {{/partial}}
 
 {{> layout.hbs}}

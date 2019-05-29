@@ -1,0 +1,35 @@
+{{#partial "content"}}
+    {{#if department}}
+        <h3>{{ department.name }}</h3>
+        <hr>
+
+        <h3>Sections</h3>
+
+        {{#if department.sections}}
+        <ul>
+            <li>
+                <p>{{department.section}}</p>
+            </li>
+        </ul>
+        {{else}}
+            <h4>No sections</h4>
+        {{/if}}
+
+<hr>
+
+        <a href="/department/{{department.id}}/add">Add Sections</a>
+
+<hr>
+        <a href="/department/{{department.id}}/update">Update this department's sections</a>
+
+    {{else}}
+
+        <hr>
+        <p>No departments posted yet...</p>
+
+    {{/if}}
+
+
+{{/partial}}
+
+{{>layout.hbs}}

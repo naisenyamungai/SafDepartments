@@ -1,0 +1,13 @@
+{{#partial "content"}}
+
+    {{#if section}}
+        {{#each section}}
+            <ul>
+                <li>{{section}}</li>
+            </ul>
+        {{/each}}
+    {{/if}}
+
+{{/partial}}
+
+{{> layout.hbs}}

@@ -2,39 +2,36 @@
 
     <h2>TECHNOLOGY DEPARTMENTS</h2>
 
-<!--    {{#if department}}-->
-<!--        {{#each department}}-->
-<!--            {{department}}-->
-
-<!--            <p>{{department}} created </p>-->
-
-<!--        {{/each}}-->
-
-<!--    {{else}}-->
-
-<!--        <p>No departments posted yet</p>-->
-
-<!--    {{/if}}-->
-
-<!--    <a href="/">Return to home page</a>-->
-
-<!--    <h2>TECHNOLOGY DEPARTMENTS</h2>-->
-
     {{#if department}}
         {{#each department}}
-            <div class="row">
-                <div class="col-md-4">
-                    {{abb}}
+            <div class="card">
+                <div class="card-header">
+
                 </div>
 
-                <div class="col-md-4">
-                    {{name}}
+                <div class="card bg-secondary text-white">
+                    <div class="row">
+                        <div class="col-md-2">
+                            {{abb}}
+                        </div>
+                        <div class="col-md-3">
+                            {{name}}
+                        </div>
+
+                        <div class="col-md-3">
+                            {{division}}
+                        </div>
+                         <div class="col-md-4">
+                             <a href="/department/{{id}}">View more details</a>
+                         </div>
+                    </div>
                 </div>
 
-                <div class="col-md-4">
-                    {{division}}
+                <div class="card-footer">
+
                 </div>
             </div>
+
 
         {{/each}}
 
