@@ -6,11 +6,13 @@
         <h3>Sections</h3>
 
         {{#if department.sections}}
-        <ul>
-            <li>
-                <p>{{department.section}}</p>
-            </li>
-        </ul>
+          {{#each department.sections}}
+            <ul>
+                <li>
+                    <p>{{department.section}}</p>
+                </li>
+            </ul>
+          {{/each}}
         {{else}}
             <h4>No sections</h4>
         {{/if}}
